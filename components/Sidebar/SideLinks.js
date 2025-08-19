@@ -1,31 +1,47 @@
 import styles from './SideLinks.module.scss'
-import github from '../../public/static/images/Side/github-sign.png'
-import linkedIn from '../../public/static/images/Side/linkedIn.png'
 import Image from 'next/image'
 
 const SideLinks = () => {
    return (
-      <>
-         <div className={styles.sideContainer}>
-            <div className={styles.imgParentContainer}>
+      <div className={styles.sideContainer}>
+         <div className={styles.imgParentContainer}>
 
-               <div className={styles.imgContainer}>
-                  <a href="https://github.com/JJCayabyab?tab=repositories" target="_blank">
-                     <Image href="https://github.com/JJCayabyab?tab=repositories" target="_blank" width={35} height={35} src={github} className={styles.github} fill />
-                  </a>
-               </div>
-
-               <div className={styles.imgContainer}>
-                  <a href="https://www.linkedin.com/in/jeremy-cayabyab-858759296/" target="_blank">
-                     <Image src={linkedIn} width={35} height={35} fill className={styles.linkedIn} />
-                  </a>
-               </div>
-
-
+            <div className={styles.imgContainer}>
+               <a
+                  href="https://github.com/JJCayabyab?tab=repositories"
+                  target="_blank"
+                  rel="noopener noreferrer"
+               >
+                  <Image
+                     src="/static/images/Side/github-sign.png"
+                     width={35}
+                     height={35}
+                     alt="GitHub"
+                     className={styles.github}
+                  />
+               </a>
             </div>
-            <hr />
+
+         
+            <div className={styles.imgContainer}>
+               <a
+                  href="https://www.linkedin.com/in/jeremy-cayabyab-858759296/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+               >
+                  <Image
+                     src="/static/images/Side/linkedin.png"
+                     width={35}
+                     height={35}
+                     alt="LinkedIn"
+                     className={styles.linkedIn}
+                  />
+               </a>
+            </div>
          </div>
-      </>
+
+         <hr />
+      </div>
    )
 }
 
