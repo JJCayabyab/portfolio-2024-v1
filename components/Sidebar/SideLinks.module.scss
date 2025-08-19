@@ -1,0 +1,73 @@
+@import '../../styles/utils/variables';
+@import '../../styles/utils/mixins';
+
+.sideContainer {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0px;
+    margin-left: 20px;
+    position: fixed;
+    margin-bottom: 0px;
+    padding: 0px;
+
+    img {
+        width: 35px;
+        height: 35px;
+    }
+
+    hr {
+        height: 140px;
+
+    }
+
+    .imgParentContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+
+        .imgContainer {
+            display: block;
+        }
+    }
+
+
+
+}
+
+
+
+.github:hover {
+    content: url('../../public/static/images/Side/github-sign-1.png');
+}
+
+.linkedIn:hover {
+    content: url('../../public/static/images/Side/linkedin-1.png');
+}
+
+.imgContainer img {
+    transition: transform 0.5s;
+}
+
+
+.github:after {
+    transform: translateY(-5px);
+    transition: transform 0.5s;
+}
+
+
+
+@include phablet {
+    .sideContainer {
+        display: none;
+    }
+}
+
+
+@include mobile {
+    .sideContainer {
+        display: none;
+    }
+}

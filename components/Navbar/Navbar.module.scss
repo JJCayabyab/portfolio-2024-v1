@@ -1,0 +1,136 @@
+@import '../../styles/utils/variables';
+@import '../../styles/utils/mixins';
+
+
+.navContainer {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(80px);
+    background-color: #111a2300;
+    z-index: 200;
+    padding: 2px 0px;
+    font-family: $font-secondary;
+
+    .logoContainer {
+        margin-left: 80px;
+    }
+
+}
+
+
+.options {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.optionsContainer {
+    margin-right: 80px;
+
+    ul {
+        li {
+            &:hover {
+                color: $blue-color;
+            }
+        }
+    }
+}
+
+.sideContainer {
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    height: 200vh;
+    width: 60%;
+    z-index: 999;
+    box-shadow: -10px 0 10px rgb(0, 0, 0, 0.1);
+    margin-right: 0;
+    color: rgb(255, 255, 255);
+    background-color: #3d5a77fb;
+    backdrop-filter: blur(10px);
+
+    .options {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        margin-left: 50px;
+
+        li {
+            &:hover {
+                color: $blue-color;
+            }
+        }
+    }
+
+    .imgParentContainer {
+        padding: 0px 50px;
+
+        div {
+            margin-bottom: 20px;
+        }
+
+    }
+
+}
+
+
+
+.menuButton {
+    display: none;
+}
+
+
+//styles for image links side
+@include phablet {
+    .hideOnSmallScreen {
+        display: none;
+    }
+
+    .menuButton {
+        display: block;
+    }
+
+    .options {
+        li {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+@include mobile {
+
+    .logoContainer {
+        display: none;
+    }
+
+    .hideOnSmallScreen {
+        display: none;
+    }
+
+    .menuButton {
+        display: block;
+        right: 0;
+        position: fixed;
+        margin-right: 10px;
+    }
+
+    .options {
+        li {
+
+            margin-bottom: 20px;
+        }
+    }
+}

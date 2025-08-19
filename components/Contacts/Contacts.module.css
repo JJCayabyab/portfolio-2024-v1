@@ -1,0 +1,125 @@
+.bgContainer {
+  background-image: url("../../public/static/images/bg-pattern-2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 40px;
+}
+
+.contactsParenteContainer {
+  width: 100%;
+  font-family: "Inter", sans-serif;
+}
+
+.contactsContainer {
+  color: white;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.contactsContainer .shortContacts {
+  font-size: 1.3em;
+  text-align: center;
+  font-weight: 400;
+  width: 60%;
+  margin: 0 auto;
+  text-align: justify;
+  margin-top: 20px;
+}
+
+.contacts {
+  padding-top: 40px;
+  color: #57bfff;
+  text-align: center;
+  font-size: 3em;
+  font-weight: 600;
+  background-image: linear-gradient(43deg, #1FA5F7 0%, #63F1FA 40%, #0884d1 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.iconWrapper {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 50px;
+  width: 100%;
+}
+.iconWrapper .iconContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .shortContacts {
+    width: 60%;
+  }
+  .iconWrapper .iconContainer {
+    width: 35%;
+  }
+  .contactsContainer .contacts {
+    font-size: 2.7em;
+  }
+  .contactsContainer .shortContacts {
+    font-size: 1.1em;
+  }
+  .contactsContainer .iconContainer h1 {
+    font-size: 1em;
+  }
+  .contactsContainer .iconContainer .iconImageContainer {
+    height: 90px;
+    width: 90px;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .contactsContainer .shortContacts {
+    width: 90%;
+  }
+  .contactsContainer .iconWrapper {
+    gap: 10px;
+  }
+  .contactsContainer .iconWrapper .iconContainer {
+    width: 45%;
+  }
+  .contactsContainer .contacts {
+    font-size: 2.3em;
+  }
+  .contactsContainer .shortContacts {
+    font-size: 1em;
+  }
+  .contactsContainer .iconContainer h1 {
+    font-size: 0.7em;
+  }
+  .contactsContainer .iconContainer .iconImageContainer {
+    height: 80px;
+    width: 80px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .contactsContainer {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .contactsContainer .shortContacts {
+    width: 90%;
+  }
+  .contactsContainer .iconWrapper {
+    flex-direction: row;
+    gap: 25px;
+  }
+  .contactsContainer .iconWrapper .iconContainer h1 {
+    font-size: 0.6em;
+  }
+  .contactsContainer .iconWrapper .iconContainer .iconImageContainer {
+    height: 70px;
+    width: 70px;
+  }
+  .contactsContainer .contacts {
+    font-size: 2em;
+  }
+  .contactsContainer .shortContacts {
+    font-size: 0.8em;
+  }
+}/*# sourceMappingURL=Contacts.module.css.map */

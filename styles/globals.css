@@ -1,0 +1,11 @@
+body {
+  background-image: url("../public/static/images/bg-pattern-1.png");
+  margin-right: 0;
+  margin-left: 0;
+  overflow-x: hidden;
+  /* Hide horizontal scrollbar */
+}
+
+html {
+  scroll-behavior: smooth;
+}/*# sourceMappingURL=globals.css.map */

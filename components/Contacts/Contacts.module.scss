@@ -1,0 +1,177 @@
+@import '../../styles/utils/variables';
+@import '../../styles/utils/mixins';
+
+
+.bgContainer {
+    background-image: url('../../public/static/images/bg-pattern-2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 40px;
+}
+
+
+.contactsParenteContainer {
+    width: 100%;
+    font-family: $font-secondary;
+}
+
+.contactsContainer {
+    color: white;
+    @include left-right-margin;
+
+    .shortContacts {
+        font-size: 1.3em;
+        text-align: center;
+        font-weight: 400;
+        width: 60%;
+        margin: 0 auto;
+        text-align: justify;
+        margin-top: 20px;
+    }
+}
+
+
+.contacts {
+    padding-top: 40px;
+    color: $blue-color;
+    text-align: center;
+    font-size: 3em;
+    font-weight: 600;
+    background-image: $blue-text-gradient;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.iconWrapper {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 50px;
+    width: 100%;
+
+    .iconContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+//for responsive
+@include tablet {
+    .shortContacts {
+        width: 60%
+    }
+
+    .iconWrapper {
+        .iconContainer {
+            width: 35%;
+        }
+    }
+
+    .contactsContainer {
+        .contacts {
+            font-size: 2.7em;
+        }
+
+        .shortContacts {
+            font-size: 1.1em;
+        }
+
+        .iconContainer {
+            h1 {
+                font-size: 1em;
+
+            }
+
+            .iconImageContainer {
+                height: 90px;
+                width: 90px;
+            }
+        }
+    }
+}
+
+@include phablet {
+
+
+
+    .contactsContainer {
+
+        .shortContacts {
+            width: 90%;
+        }
+
+        .iconWrapper {
+            gap: 10px;
+
+            .iconContainer {
+                width: 45%;
+            }
+        }
+
+        .contacts {
+            font-size: 2.3em;
+        }
+
+        .shortContacts {
+            font-size: 1em;
+        }
+
+        .iconContainer {
+            h1 {
+                font-size: 0.7em;
+            }
+
+
+            .iconImageContainer {
+                height: 80px;
+                width: 80px;
+            }
+        }
+    }
+
+}
+
+
+@include mobile {
+
+    .contactsContainer {
+        margin-left: 20px;
+        margin-right: 20px;
+
+        .shortContacts {
+            width: 90%;
+        }
+
+        .iconWrapper {
+            flex-direction: row;
+            gap: 25px;
+
+            .iconContainer {
+                h1 {
+                    font-size: 0.6em;
+                }
+
+                .iconImageContainer {
+                    height: 70px;
+                    width: 70px;
+                }
+
+            }
+        }
+
+        .contacts {
+            font-size: 2em;
+        }
+
+        .shortContacts {
+            font-size: 0.8em;
+        }
+    }
+
+
+}

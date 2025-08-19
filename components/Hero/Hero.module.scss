@@ -1,0 +1,253 @@
+@import '../../styles/utils/variables';
+@import '../../styles/utils/mixins';
+
+
+
+.groupContainer {
+    @include left-right-margin;
+    display: flex;
+    margin-top: 100px;
+    color: white;
+}
+
+.textContainer {
+    width: 70%;
+
+    p {
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .hello {
+        font-size: 2em;
+        font-family: $font-primary;
+    }
+
+    .jeremy {
+        background-image: $blue-text-gradient;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    .position {
+        font-family: $font-secondary;
+        font-size: 3.9em;
+        font-weight: 600;
+        background-image: $blue-text-gradient;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    .shortDesc {
+        font-size: 1.4em;
+        font-family: $font-primary;
+        line-height: 1.5;
+
+    }
+
+}
+
+.position {
+    font-size: 2em;
+
+    span {
+        color: white;
+    }
+}
+
+.textContainer {
+    a {
+        button {
+            padding: 10px 15px;
+            border-radius: 7px;
+            font-size: 20px;
+            font-family: "Inter", sans-serif;
+            background: none;
+            border: 1px solid #57BFFF;
+            padding: 10px 20px;
+            cursor: pointer;
+            color: #57BFFF;
+            transition: all 0.5s;
+            font-weight: 450;
+
+            &:hover {
+                color: white;
+                background-color: #57BFFF;
+                font-weight: 450;
+            }
+        }
+    }
+}
+
+/* my image styles*/
+.glowContainer {
+    position: relative;
+    align-items: flex-end;
+    display: flex;
+}
+
+
+.glowContainer::before {
+    content: '';
+    position: absolute;
+    top: 40%;
+    left: 52%;
+    width: 45%;
+    height: 30%;
+    background: rgb(63, 181, 255);
+    border-radius: 50%;
+    filter: blur(100px);
+    transform: translate(-50%, -50%);
+}
+
+/*end of  my image styles*/
+
+
+//for responsive 
+@include tablet {
+
+    .textContainer {
+        width: 70%;
+
+        p {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .hello {
+            font-size: 1.4em;
+            font-family: $font-primary;
+        }
+
+
+        .position {
+            font-size: 3.5em;
+        }
+
+        .shortDesc {
+            font-size: 1em;
+        }
+
+    }
+
+    .glowContainer {
+
+        &::before {
+            filter: blur(85px);
+        }
+    }
+
+
+}
+
+
+@include phablet {
+    .textContainer {
+        width: 90%;
+
+        p {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .hello {
+            font-size: 1.3em;
+            font-family: $font-primary;
+        }
+
+
+        .position {
+            font-size: 3.3em;
+        }
+
+        .shortDesc {
+            font-size: 1em;
+        }
+
+    }
+
+    .glowContainer {
+        height: 400px;
+        width: 400px;
+
+        &::before {
+            filter: blur(70px);
+        }
+    }
+
+    .groupContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .textContainer {
+        text-align: center;
+    }
+
+}
+
+@include mobile {
+
+
+
+    .groupContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 40px;
+        margin-right: 40px;
+
+        .textContainer {
+            width: 90%;
+            text-align: center;
+
+            p {
+                margin-top: 0;
+                margin-bottom: 20px;
+            }
+
+            .hello {
+                font-size: 0.9em;
+                font-family: $font-primary;
+            }
+
+
+            .position {
+                font-size: 2.2em;
+            }
+
+            .shortDesc {
+                font-size: 0.7em;
+            }
+
+            a {
+                button {
+                    font-size: 0.7em;
+                }
+            }
+
+        }
+
+        .glowContainer {
+            height: 250px;
+            width: 250px;
+
+            &::before {
+                filter: blur(50px);
+            }
+
+        }
+
+
+
+
+
+    }
+
+
+
+}

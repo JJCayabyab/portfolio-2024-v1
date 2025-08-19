@@ -1,0 +1,54 @@
+.sideContainer {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0px;
+  margin-left: 20px;
+  position: fixed;
+  margin-bottom: 0px;
+  padding: 0px;
+}
+.sideContainer img {
+  width: 35px;
+  height: 35px;
+}
+.sideContainer hr {
+  height: 140px;
+}
+.sideContainer .imgParentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.sideContainer .imgParentContainer .imgContainer {
+  display: block;
+}
+
+.github:hover {
+  content: url("../../public/static/images/Side/github-sign-1.png");
+}
+
+.linkedIn:hover {
+  content: url("../../public/static/images/Side/linkedin-1.png");
+}
+
+.imgContainer img {
+  transition: transform 0.5s;
+}
+
+.github:after {
+  transform: translateY(-5px);
+  transition: transform 0.5s;
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .sideContainer {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .sideContainer {
+    display: none;
+  }
+}/*# sourceMappingURL=SideLinks.module.css.map */

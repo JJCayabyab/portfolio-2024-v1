@@ -1,0 +1,509 @@
+@import '../../styles/utils/variables';
+@import '../../styles/utils/mixins';
+
+.bgContainer {
+    background-image: url('../../public/static/images/bg-pattern-2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 50px;
+}
+
+.aboutContainer {
+    @include left-right-margin;
+    color: white;
+    font-family: $font-secondary;
+    padding-top: 50px;
+
+
+    .aboutMe {
+        padding-top: 100px;
+        text-align: center;
+        font-size: 3em;
+        font-weight: 600;
+        background-image: $blue-text-gradient;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        margin-bottom: 50px;
+    }
+
+    .shortAbout {
+        font-size: 1.3em;
+        text-align: center;
+        font-weight: 400;
+        width: 60%;
+        margin: 0 auto;
+        text-align: justify;
+    }
+}
+
+
+
+//default styles for hobbies
+
+.hobbiesParentContainer {
+    width: 100%;
+    margin-top: 20px;
+
+}
+
+.hobbiesTitleContainer,
+.achieveTitleContainer,
+.techTitleContainer {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+
+    h1 {
+        font-size: 2.4em;
+    }
+}
+
+.hobbiesTitleContainer hr,
+.achieveTitleContainer hr,
+.techTitleContainer hr {
+    width: 10%;
+    height: 1px;
+    margin-top: 30px;
+    background-color: #8EB1D9;
+    margin-left: 10px;
+}
+
+.hobbiesTitle,
+.achieveTitle,
+.techTitle {
+    font-size: 55px;
+    padding-top: 20px;
+    color: $blue-color;
+    font-weight: 400;
+}
+
+.hobbyCont {
+    width: 30vh;
+    height: 30vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 15px;
+}
+
+.hobbyWrapper,
+.acievementsWrapper,
+.techWrapper {
+    margin-bottom: 100px;
+}
+
+
+
+.hobbyName {
+    text-align: center;
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+
+
+.hobbiesWrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.hobbiesWrapper>div:nth-child(4),
+.hobbiesWrapper>div:nth-child(5) {
+    margin-left: 100%;
+}
+
+
+//ebd if default styles for hobbies
+
+//  default styles for achievements
+.achievementsParentContainer {
+    width: 100%;
+    padding: 20px;
+    align-items: center;
+
+    .achieveTitleContainer {
+        margin-bottom: 50px;
+    }
+}
+
+.timeline {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+
+    .timelineContainer {
+        font-family: $font-secondary;
+        padding: 15px 30px;
+        border-radius: 15px;
+        width: 50%;
+        display: flex;
+        background-color: #4f7da7;
+        border: 15px;
+
+        .timelineTextBox {
+            width: 90%;
+
+            h1 {
+                font-size: 1.5em;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+
+            h5 {
+                font-size: 0.9em;
+                margin-bottom: 10px;
+            }
+
+            h3 {
+                font-size: 1.2em;
+            }
+        }
+
+        .schoolContainer {
+            width: 15%;
+            display: block;
+            justify-content: center;
+            text-align: center;
+
+            img {
+                border-radius: 50%;
+                height: 80px !important;
+                width: 80px !important;
+            }
+        }
+
+
+    }
+}
+
+//  end of default styles for achievements
+
+
+/*  start of tech stack style*/
+.techParentContainer {
+    width: 100%;
+}
+
+
+.techWrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px !important;
+    width: 60%;
+    margin: auto;
+    padding: 1.7% 5%;
+    background: $blue-text-gradient;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.techContainer {
+    display: flex;
+    font-family: $font-secondary;
+    font-size: 1.1em;
+    background-color: #22303C;
+    padding: 3%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.techIcon {
+    width: 35px;
+    height: 35px;
+}
+
+//for responsive
+@include tablet {
+    .aboutContainer {
+        .aboutMe {
+            font-size: 2.7em;
+        }
+
+        .shortAbout {
+            font-size: 1.1em;
+        }
+
+    }
+
+    .hobbiesWrapper {
+        grid-template-columns: repeat(2, 300px);
+
+        div:nth-child(4) {
+            margin-left: 0;
+        }
+
+        div:nth-child(5) {
+            margin-left: 100%;
+        }
+    }
+
+
+
+    .hobbiesTitleContainer,
+    .achieveTitleContainer,
+    .techTitleContainer {
+        h1 {
+            font-size: 2.1em;
+        }
+    }
+
+
+    .schoolContainer {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+
+        img {
+            border-radius: 50%;
+            width: 60px !important;
+            height: 60px !important;
+        }
+    }
+
+
+    .techContainer {
+        font-size: 0.9em;
+    }
+
+    .techWrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+
+}
+
+@include phablet {
+
+    .aboutContainer {
+        margin-right: 60px;
+        margin-left: 60px;
+
+        .aboutMe {
+            font-size: 2.4em;
+        }
+
+        .shortAbout {
+            font-size: 1em;
+        }
+    }
+
+    .hobbiesWrapper {
+        grid-template-columns: repeat(2, 300px);
+
+        div:nth-child(4) {
+            margin-left: 0px;
+        }
+
+        div:nth-child(5) {
+            margin-left: 100%;
+        }
+
+        .hobbyCont {
+            width: 25vh;
+            height: 25vh;
+        }
+
+        .hobbyWrapper {
+            margin-bottom: 25px;
+            .hobbyName {
+                font-size: 1em;
+            }
+        }
+    }
+
+    .hobbiesTitleContainer,
+    .achieveTitleContainer,
+    .techTitleContainer {
+        h1 {
+            font-size: 1.9em;
+        }
+    }
+
+    .achievementsParentContainer {
+        .achieveTitleContainer {
+            margin-left: 0%;
+            align-items: center;
+
+            h1 {
+                text-align: center;
+            }
+
+            hr {
+                display: none;
+            }
+        }
+    }
+
+    .timelineContainer {
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+        align-items: center;
+
+        .timelineTextBox {
+            h1 {
+                font-size: 1.4em !important;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+
+            h5 {
+                font-size: 0.9em !important;
+                margin-bottom: 10px;
+            }
+
+            h3 {
+                font-size: 1.1em !important;
+            }
+        }
+    }
+
+
+    .techContainer {
+        font-size: 0.9em;
+    }
+
+    .techWrapper {
+        grid-template-columns: repeat(2, 1fr);
+        font-size: 0.9em;
+        width: 55%;
+
+    }
+
+
+}
+
+
+@include mobile {
+
+    .aboutContainer {
+        margin-right: 40px;
+        margin-left: 40px;
+
+        .aboutMe {
+            font-size: 2em;
+        }
+
+        .shortAbout {
+            font-size: 0.8em;
+            width: 90%;
+        }
+    }
+
+    .hobbiesWrapper {
+        grid-template-columns: repeat(1, 100px);
+
+        div:nth-child(4) {
+            margin-left: 0;
+        }
+
+        div:nth-child(5) {
+            margin-left: 0;
+        }
+
+        .hobbyWrapper {
+            margin-bottom: 30px !important;
+
+            .hobbyCont {
+                width: 20vh;
+                height: 20vh;
+
+                img {
+                    width: 15vh !important;
+                    height: 15vh !important;
+                }
+            }
+        }
+
+
+        .hobbyName {
+            font-size: 0.8em;
+        }
+    }
+
+
+
+    .hobbiesTitleContainer,
+    .achieveTitleContainer,
+    .techTitleContainer {
+        h1 {
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        hr {
+            display: none;
+        }
+    }
+
+    .titleContainer {
+        display: block;
+    }
+
+    .timelineContainer {
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+        align-items: center;
+
+        .timelineTextBox {
+            h1 {
+                font-size: 1.1em !important;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+
+            h5 {
+                font-size: 0.7em !important;
+                margin-bottom: 10px;
+            }
+
+            h3 {
+                font-size: 0.9em !important;
+            }
+        }
+    }
+
+    .achievementsParentContainer {
+        padding: 0px;
+
+        .achieveTitleContainer {
+            margin-left: 0%;
+        }
+    }
+
+    .techWrapper {
+        width: 55%;
+        grid-template-columns: repeat(1, .7fr);
+        font-size: 0.8em;
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        .techContainer {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            gap: 3px;
+            font-size: 0.8em;
+
+            img {
+                width: 25px !important;
+                height: 25px !important;
+            }
+        }
+    }
+}
