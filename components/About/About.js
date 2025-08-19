@@ -8,7 +8,7 @@ const About = () => {
   const displayTechStack = techList.map((tech, index) => (
     <div key={index} className={styles.techContainer}>
       <Image
-        src={tech.icon} // should be a public path: "/static/images/tech/..."
+        src={tech.icon}
         className={styles.techIcon}
         width={35}
         height={35}
@@ -29,10 +29,10 @@ const About = () => {
       </div>
       <div className={styles.schoolContainer}>
         <Image
-          src={achievement.icon} // should be a public path: "/static/images/schools/..."
-          width={50}
-          height={50}
+          src={achievement.icon}
           alt={`${achievement.school} logo`}
+          fill
+          style={{ objectFit: 'cover', borderRadius: '50%' }}
         />
       </div>
     </div>
@@ -45,7 +45,7 @@ const About = () => {
         style={{ backgroundColor: hobby.color }}
       >
         <Image
-          src={hobby.url} // should be "/static/images/hobbies/..."
+          src={hobby.url}
           width={150}
           height={150}
           alt={hobby.name}

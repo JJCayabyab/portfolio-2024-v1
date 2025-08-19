@@ -168,16 +168,13 @@
         }
 
         .schoolContainer {
-            width: 15%;
             display: block;
             justify-content: center;
             text-align: center;
-
-            img {
-                border-radius: 50%;
-                height: 80px !important;
-                width: 80px !important;
-            }
+            position: relative;
+            object-fit: cover;
+            width: 80px;
+            height: 80px;
         }
 
 
@@ -262,16 +259,11 @@
 
 
     .schoolContainer {
-        width: 100%;
+        width: 60px !important;
+        height: 60px !important;
         justify-content: center;
         text-align: center;
         position: relative;
-
-        img {
-            border-radius: 50%;
-            width: 60px !important;
-            height: 60px !important;
-        }
     }
 
 
@@ -320,6 +312,7 @@
 
         .hobbyWrapper {
             margin-bottom: 25px;
+
             .hobbyName {
                 font-size: 1em;
             }
@@ -383,6 +376,17 @@
         font-size: 0.9em;
         width: 55%;
 
+    }
+
+
+    .schoolContainer {
+        width: 50px !important;
+        height: 50px !important;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        margin-bottom: 10px;   
+        margin-bottom: 10px;
     }
 
 
@@ -505,5 +509,14 @@
                 height: 25px !important;
             }
         }
+    }
+
+    .schoolContainer {
+        margin-bottom: 10px;
+        width: 40px !important;
+        height: 40px !important;
+        justify-content: center;
+        text-align: center;
+        position: relative;
     }
 }
